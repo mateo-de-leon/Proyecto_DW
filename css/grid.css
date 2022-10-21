@@ -380,15 +380,6 @@ progress::-moz-progress-bar {
     padding: 10px 0;
 }
 
-.heart {
-    color: red;
-}
-
-.credits {
-    text-decoration: none;
-    color: var(--special);
-}
-
 .close {
     display: flex;
     position: relative;
@@ -492,7 +483,6 @@ input[type=range]::-ms-thumb {
     border-radius: 50px;
     cursor: pointer;
     margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -505,10 +495,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 @supports (-ms-ime-align:auto) {
 
-    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
     input[type=range] {
         margin: 0;
-        /*Edge starts the margin from the thumb, not the track as other browsers do*/
     }
 }
 
