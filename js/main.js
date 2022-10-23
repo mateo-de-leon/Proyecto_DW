@@ -29,8 +29,8 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
 	title.innerText = `Avenged Sevenfold - ${song}`;
-	audio.src = `/assets/audio/${song}.m4a`;
-	cover.src = `/assets/img/${song}.jpg`;
+	audio.src = `./assets/audio/${song}.m4a`;
+	cover.src = `./assets/img/${song}.jpg`;
 }
 
 var boton = document.getElementById("boton");
