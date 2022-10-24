@@ -13,24 +13,37 @@ const volume = document.getElementById("volume");
 
 // Song titles
 const songs = [
-	"Dear_God",
-	"A_little_Piece_Of_Heaven",
-	"Seize_The_Day",
-	"Afterlife",
-	"MIA",
-	"So_Far_Away",
-	"Until_The_End",
+	"(sic)",
+	"Custer",
+	"Lech",
+	"The dying song",
+	"The negative one",
 ];
+const artists = [
+	"Slipknot",
+	"Slipknot",
+	"Slipknot",
+	"Slipknot",
+	"Slipknot"
+]
+const albums = [
+	"Slipknot_annv",
+	"The_Gray_chapter",
+	"The_Gray_chapter",
+	"Slipknot_annv",
+	"The_Gray_chapter"
+	
+]
 
-let songIndex = 0;
+let songIndex = 0;   
 
-loadSong(songs[songIndex]);
 
 // Update song details
 function loadSong(song) {
-	title.innerText = `Avenged Sevenfold - ${song}`;
-	audio.src = `./assets/audio/${song}.m4a`;
-	cover.src = `./assets/img/${song}.jpg`;
+	title.innerText = `${artists[songIndex]} - ${song}`;
+	audio.src = `./assets/audio/${songs[songIndex]}.mp3`;
+	cover.src = `./assets/img/${albums[songIndex]}.jpg`;
+
 }
 
 var boton = document.getElementById("boton");
@@ -68,8 +81,10 @@ const updateProgress = () => {
 };
 boton.addEventListener("click", function () {
 	if (audio.paused) {
+		audio.classList.remove();
 		playSong();
 	} else {
+		title.classList.remove();
 		pauseSong();
 	}
 });
@@ -126,7 +141,7 @@ function shiftSong() {
 		}
 		newMixSong(numero);
 	}
-	numeroAleatorio(0, songs.length - 1);
+	numeroAleatorio(0, songs.length);
 }
 
 bucleBtn.addEventListener("click", bucle);
@@ -189,3 +204,6 @@ volume.oninput = (e) => {
 	const vol = e.target.value;
 	audio.volume = vol;
 };
+function vago() {
+	alert("Es una lástima pero no hemos programado esto :(")
+}
